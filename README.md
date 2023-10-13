@@ -1,6 +1,6 @@
 # hiperlang.org
 
-This is the repository for the [Hiper.](https://github.com/hiperlang) website.
+Website for [Hiper.](https://github.com/hiperlang)
 
 ## Running locally
 
@@ -59,4 +59,4 @@ cd hiperlang.org/assets/icons
 
 ## Feedback
 
-If you've found a bug or typo or want to suggest an improvement, please let us know by [creating an issue](https://github.com/hiperlang/hiperlang.org/issues). Thanks! 👋
+If you've found a bug or typo or want to suggest an improvement, please let us know by [creating an issue](https://github.com/hiperlang/hiperlang.org/issues).<br />Thanks! 👋
