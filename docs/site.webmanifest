@@ -5,7 +5,7 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "icons": [
-    { "src": "/assets/icon-192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "/assets/icon-512.png", "type": "image/png", "sizes": "512x512" }
+    { "src": "/hiper-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/hiper-512.png", "type": "image/png", "sizes": "512x512" }
   ]
 }
