@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ru" class="md:text-1.1rem">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>👋  Hiper Programming Language</title>
+<!-- icon -->
+<link rel="icon" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/hiper.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<!-- fonts -->
+<link
+  rel="preload"
+  href="/Montserrat.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin />
+<!-- style -->
+<meta name="theme-color" content="white" />
+<link rel="stylesheet" href="/styles.css?v=1.0" />
+<!-- manifest -->
+<link rel="manifest" href="/site.webmanifest" />
+<!-- i18l -->
+<link rel="alternate" hreflang="en" href="https://hiperlang.org" />
+  </head>
+  <body
+    class="antialiased font-body font-medium text-gray-700 dark:text-#f0f0f0 dark:bg-#191919">
+    <!-- -------------------------- -->
+    <!-- NAV -->
+    <!-- -------------------------- -->
+    <header
+      class="w-full max-w-750px min-w-375px m-auto px-9 py-8 z-2 --slide-up">
+      <nav class="flex flex-wrap justify-between c-gray-4">
+  <!-- LOGO -->
+  <a href="/" class="self-center">
+    <svg
+      class="--logo h-8.5 w-8.5 transition-duration-100"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      alt="Hiper. logo">
+      <rect
+        width="100%"
+        height="100%"
+        rx="8"
+        ry="8"
+        class="fill-#000 dark:fill-#fff" />
+      <path
+        class="dark:fill-#000 fill-#fff"
+        d="M28.1 44V21.5h5.4V44zM17.5 21.5V44h-5.4V21.5zm11 8.8v4.5H17.1v-4.5zM43.9 44h-5.2V26.7h5.2zm-2.6-19.8q-1.5 0-2.4-.8-.9-.8-.9-2t.9-2q.9-.8 2.4-.8 1.4 0 2.3.8.9.7.9 1.9 0 1.3-.9 2.1t-2.3.8zm9.3 20q-1.3 0-2.3-.8-.9-.9-.9-2.3t.9-2.3q1-.8 2.3-.8 1.4 0 2.3.8 1 .9 1 2.3t-1 2.3q-.9.8-2.3.8z" />
+    </svg>
+  </a>
+
+  <!-- LINKS -->
+  <div class="flex-1"></div>
+  <div class="flex md:text-1rem items-stretch">
+    <!-- ABOUT -->
+    <a
+      class="hidden sm:block cursor-not-allowed self-center px-1.5 hover:c-black dark:hover:c-white border-b-2 border-transparent transition-duration-100 hover:border-black dark:hover:border-white">
+      О проекте
+    </a>
+
+    <!-- SUPPORT -->
+    <a
+      class="hidden sm:block cursor-not-allowed self-center px-1.5 hover:c-black dark:hover:c-white border-b-2 border-transparent transition-duration-100 hover:border-black dark:hover:border-white">
+      Поддержать
+    </a>
+
+    <!-- CONTACTS -->
+    <a
+      class="hidden sm:block cursor-not-allowed self-center px-1.5 hover:c-black dark:hover:c-white border-b-2 border-transparent transition-duration-100 hover:border-black dark:hover:border-white">
+      Контакты
+    </a>
+
+    <!-- SOURCE CODE  -->
+    <a
+      href="https://github.com/hiperlang"
+      target="_blank"
+      class="hidden sm:block cursor-pointer self-center px-1.5 hover:c-black dark:hover:c-white border-b-2 border-transparent transition-duration-100 hover:border-black dark:hover:border-white">
+      Исходный код
+      <svg
+        class="w-0.78rem vertical-middle inline-block fill-gray-400 transition-duration-100"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 -960 960 960">
+        <path
+          d="M206.783-100.782q-44.305 0-75.153-30.848-30.848-30.848-30.848-75.153v-546.434q0-44.305 30.848-75.153 30.848-30.848 75.153-30.848H480v106.001H206.783v546.434h546.434V-480h106.001v273.217q0 44.305-30.848 75.153-30.848 30.848-75.153 30.848H206.783ZM405.523-332 332-405.523l347.694-347.694H560v-106.001h299.218V-560H753.217v-119.694L405.523-332Z" />
+      </svg>
+    </a>
+
+    <!-- SHARE (ICON) -->
+    <a class="--share cursor-pointer self-center pl-1.5 pr-1">
+      <svg
+        class="h-1.2rem fill-gray-400 transition-duration-100"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 -960 960 960">
+        <path
+          d="M719.986-72.587q-53.095 0-90.247-37.162T592.587-200q0-7.228 1-14.973 1-7.744 3-14.223L326.304-386.5q-17.717 15.957-39.876 24.935-22.159 8.978-46.428 8.978-53.089 0-90.251-37.166-37.162-37.166-37.162-90.261t37.162-90.247q37.162-37.152 90.251-37.152 24.269 0 46.428 8.978t39.876 24.935l270.283-157.304q-2-6.479-3-14.223-1-7.745-1-14.973 0-53.089 37.166-90.251 37.166-37.162 90.261-37.162t90.247 37.166q37.152 37.166 37.152 90.261t-37.162 90.247Q773.089-632.587 720-632.587q-24.269 0-46.428-8.739t-39.876-24.696L363.413-509.196q2 6.479 3 14.223 1 7.745 1 14.973 0 7.228-1 14.973-1 7.744-3 14.223l270.283 156.826q17.717-15.957 39.876-24.696T720-327.413q53.089 0 90.251 37.166 37.162 37.166 37.162 90.261t-37.166 90.247q-37.166 37.152-90.261 37.152ZM720-720q17 0 28.5-11.5T760-760q0-17-11.5-28.5T720-800q-17 0-28.5 11.5T680-760q0 17 11.5 28.5T720-720ZM240-440q17 0 28.5-11.5T280-480q0-17-11.5-28.5T240-520q-17 0-28.5 11.5T200-480q0 17 11.5 28.5T240-440Zm480 280q17 0 28.5-11.5T760-200q0-17-11.5-28.5T720-240q-17 0-28.5 11.5T680-200q0 17 11.5 28.5T720-160Zm0-600ZM240-480Zm480 280Z" />
+      </svg>
+    </a>
+
+    <!-- DARK MODE (ICON) -->
+    <a class="--dark-mode cursor-pointer self-center pl-1.5 pr-1 flex relative">
+      <svg
+        class="h-1.2rem dark:opacity-0 fill-gray-400 transition-duration-200"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 -960 960 960">
+        <path
+          d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z" />
+      </svg>
+
+      <svg
+        class="h-1.2rem top-0 left-auto z-1 opacity-0 dark:opacity-100% fill-gray-400 transition-duration-200 absolute"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 -960 960 960">
+        <path
+          d="M480-371q45.456 0 77.228-31.772Q589-434.544 589-480q0-45.456-31.772-77.228Q525.456-589 480-589q-45.456 0-77.228 31.772Q371-525.456 371-480q0 45.456 31.772 77.228Q434.544-371 480-371Zm0 91q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM80-434.5q-19.152 0-32.326-13.174T34.5-480q0-19.152 13.174-32.326T80-525.5h80q19.152 0 32.326 13.174T205.5-480q0 19.152-13.174 32.326T160-434.5H80Zm720 0q-19.152 0-32.326-13.174T754.5-480q0-19.152 13.174-32.326T800-525.5h80q19.152 0 32.326 13.174T925.5-480q0 19.152-13.174 32.326T880-434.5h-80Zm-320-320q-19.152 0-32.326-13.174T434.5-800v-80q0-19.152 13.174-32.326T480-925.5q19.152 0 32.326 13.174T525.5-880v80q0 19.152-13.174 32.326T480-754.5Zm0 720q-19.152 0-32.326-13.174T434.5-80v-80q0-19.152 13.174-32.326T480-205.5q19.152 0 32.326 13.174T525.5-160v80q0 19.152-13.174 32.326T480-34.5ZM222.174-673.935l-43-42Q165.5-728.609 166-747.761t13.174-33.065q13.435-13.674 32.587-13.674t32.065 13.674l42.239 43q12.674 13.435 12.555 31.706-.12 18.272-12.555 31.946-12.674 13.674-31.445 13.413-18.772-.261-32.446-13.174Zm494 494.761-42.239-43q-12.674-13.435-12.674-32.087t12.674-31.565Q686.609-299.5 705.38-299q18.772.5 32.446 13.174l43 41.761Q794.5-231.391 794-212.239t-13.174 33.065Q767.391-165.5 748.239-165.5t-32.065-13.674Zm-42-494.761Q660.5-686.609 661-705.38q.5-18.772 13.174-32.446l41.761-43Q728.609-794.5 747.761-794t33.065 13.174q13.674 13.435 13.674 32.587t-13.674 32.065l-43 42.239q-13.435 12.674-31.706 12.555-18.272-.12-31.946-12.555Zm-495 494.761Q165.5-192.609 165.5-211.761t13.674-32.065l43-42.239q13.435-12.674 32.087-12.674t31.565 12.674Q299.5-273.391 299-254.62q-.5 18.772-13.174 32.446l-41.761 43Q231.391-165.5 212.239-166t-33.065-13.174ZM480-480Z" />
+      </svg>
+    </a>
+
+    <!-- GITHUB -->
+    <!-- <a
+      href=""
+      class="cursor-pointer py-1.5 px-1.5">
+      <svg
+        class="w-1.5rem fill-gray-400 transition-duration-100"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M5.883 18.653c-.3-.2-.558-.455-.86-.816a50.32 50.32 0 0 1-.466-.579c-.463-.575-.755-.84-1.057-.949a1 1 0 0 1 .676-1.883c.752.27 1.261.735 1.947 1.588-.094-.117.34.427.433.539.19.227.33.365.44.438.204.137.587.196 1.15.14.023-.382.094-.753.202-1.095C5.38 15.31 3.7 13.396 3.7 9.64c0-1.24.37-2.356 1.058-3.292-.218-.894-.185-1.975.302-3.192a1 1 0 0 1 .63-.582c.081-.024.127-.035.208-.047.803-.123 1.937.17 3.415 1.096A11.731 11.731 0 0 1 12 3.315c.912 0 1.818.104 2.684.308 1.477-.933 2.613-1.226 3.422-1.096.085.013.157.03.218.05a1 1 0 0 1 .616.58c.487 1.216.52 2.297.302 3.19.691.936 1.058 2.045 1.058 3.293 0 3.757-1.674 5.665-4.642 6.392.125.415.19.879.19 1.38a300.492 300.492 0 0 1-.012 2.716 1 1 0 0 1-.019 1.958c-1.139.228-1.983-.532-1.983-1.525l.002-.446.005-.705c.005-.708.007-1.338.007-1.998 0-.697-.183-1.152-.425-1.36-.661-.57-.326-1.655.54-1.752 2.967-.333 4.337-1.482 4.337-4.66 0-.955-.312-1.744-.913-2.404a1 1 0 0 1-.19-1.045c.166-.414.237-.957.096-1.614l-.01.003c-.491.139-1.11.44-1.858.949a1 1 0 0 1-.833.135A9.626 9.626 0 0 0 12 5.315c-.89 0-1.772.119-2.592.35a1 1 0 0 1-.83-.134c-.752-.507-1.374-.807-1.868-.947-.144.653-.073 1.194.092 1.607a1 1 0 0 1-.189 1.045C6.016 7.89 5.7 8.694 5.7 9.64c0 3.172 1.371 4.328 4.322 4.66.865.097 1.201 1.177.544 1.748-.192.168-.429.732-.429 1.364v3.15c0 .986-.835 1.725-1.96 1.528a1 1 0 0 1-.04-1.962v-.99c-.91.061-1.662-.088-2.254-.485z"
+          fill-rule="nonzero" />
+      </svg>
+    </a> -->
+
+    <!-- MORE -->
+    <!-- <a
+      class="block cursor-not-allowed px-1.5 hover:c-black dark:hover:c-white border-b-2 border-transparent transition-duration-100 text-2rem lh-0.5rem">
+      ...
+    </a> -->
+  </div>
+</nav>
+    </header>
+
+    <!-- -------------------------- -->
+    <!-- CONTENT -->
+    <!-- -------------------------- -->
+    <div
+      class="w-full max-w-750px min-w-375px m-auto pt-15 sm:pt-16 px-9 --slide-up">
+      <!-- -------------------------- -->
+      <!-- HERO -->
+      <!-- -------------------------- -->
+      <div class="mb-12">
+  <h1
+    class="relative mb-8 text-5xl text-black font-bold font-hiper dark:text-white">
+    Hiper.
+    <span class="inline-block cursor-grab select-none --hand">👋</span>
+    <!-- <span
+        class="inline-block text-2 c-gray-3 border-solid border-1.8 rounded p-1 vertical-top"
+        >preview</span
+      > -->
+  </h1>
+  <p>
+    Язык для быстрого прототипирования веб-приложений, объединяющий HTML, CSS,
+    Javascript, XSLT и другие технологии в один простой интерфейс.
+  </p>
+</div>
+
+      <!-- -------------------------- -->
+      <!-- EDITOR -->
+      <!-- -------------------------- -->
+      <div class="flex flex-wrap mb-18 relative w-full">
+  <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg> -->
+
+  <!-- SELECT -->
+  <div class="mb-2 mr-2">
+    <div class="relative">
+      <select
+        class="px-4 pr-10 py-2 text-sm bg-gray-1 dark:bg-#232323 font-body outline-none rounded text-base cursor-pointer">
+        <option>Создание таблицы</option>
+        <option>Фибоначчи числа</option>
+        <option>Что-то еще..</option>
+      </select>
+      <svg
+        class="absolute fill-gray-700 pointer-events-none right-2 top-2.2 h-20px w-20px"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 -960 960 960">
+        <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
+      </svg>
+    </div>
+  </div>
+  <!-- RUN -->
+  <!-- <div
+    class="px-4 mb-2 py-[calc(0.5rem-2px)] text-base bg-gray-1 dark:bg-#232323 rounded transition cursor-pointer c-black focus:outline-none hover:c-blue">
+    <div class="">▶</div>
+  </div> -->
+
+  <!-- ??? -->
+  <!-- <div
+      class="px-4 py-2 ml-32 mb-2 bg-gray-1 text-sm rounded transition cursor-pointer c-black">
+      <div class="">Результат</div>
+    </div> -->
+
+  <!-- BREAK -->
+  <div class="basis-full h-0"></div>
+
+  <!-- CODE -->
+  <div
+    class="flex py-4 pl-4 pr-4 bg-gray-1 dark:bg-#232323 rounded-2 lh-1.4em overflow-auto">
+    <!-- LOC -->
+    <div class="pr-3 c-gray-3 font-mono --code-lines"></div>
+
+    <!-- Content -->
+    <pre class="relative font-mono --code-content lh-">
+.users: (.name: str, .age: num){*}  
+  `John`, 31; `Mary`, 28
+  `Tom`, 19; `Eve`, 42
+
+.style =>
+  ./&lt;tr&gt;/&lt;td&gt;
+    #padding-2
+    #border-2-gray
+
+&lt;table #style&gt; 
+  &lt;tr&gt;
+    &lt;td&gt;&lt;b&gt; `Name`
+    &lt;td&gt;&lt;b&gt; `Age`
+  for (users) |.user|
+    &lt;tr&gt;
+      &lt;td&gt; user.name
+      &lt;td&gt; user.age
+
+&lt;p #margin-t-4&gt; `Total: ` len(users)</pre
+    >
+  </div>
+
+  <!-- BREAK -->
+  <div
+    class="border-b-2 border-solid border-gray-3 basis-full pt-4 sm:hidden"></div>
+
+  <!-- RESULT -->
+  <div class="pl-6 py-4">
+    <style>
+      table,
+      th,
+      td {
+        padding: 1rem;
+        border: 2px solid slategray;
+        border-collapse: collapse;
+      }
+    </style>
+    <table>
+      <tr>
+        <td><b>Name</b></td>
+        <td><b>Age</b></td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>31</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>28</td>
+      </tr>
+      <tr>
+        <td>Tom</td>
+        <td>19</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>42</td>
+      </tr>
+    </table>
+
+    <p class="m-t-4">Total: 4</p>
+  </div>
+
+  <!-- COMMENTS -->
+  <!-- <div class="flex-none py-4 pl-4 lh-1.4em">x</div> -->
+</div>
+
+      <!-- -------------------------- -->
+      <!-- FEATURES -->
+      <!-- -------------------------- -->
+      <!-- Dinosaur, Flying Saucer, Comet, Star, Rocket, Tornado, Clock, Link, Wave -->
+      <div>
+  <!-- Feature -->
+  <div class="w-full pb-10">
+    <h2 class="text-xl text-black dark:text-#f0f0f0 font-bold mb-4">
+      Простая модель&nbsp;😎
+    </h2>
+    <p>
+      <!-- Унифицированная структура имен позволяет создавать абстракции любой
+        сложности, а встроенные операции в языке обладают гибкостью для
+        адаптации к различным задачам. -->
+      <span class="text-black dark:text-white">Hiper.</span> предлагает
+      небольшой набор простых операций и унифицированную систему типов, которые
+      подобно хамелеону 🦎 позволяют применять их в самых различных задачах и
+      эффективно масштабироваться.
+    </p>
+  </div>
+
+  <!-- Feature -->
+  <div class="w-full pb-10">
+    <h2 class="text-xl text-black dark:text-#f0f0f0 font-bold mb-4">
+      Не требует установки &nbsp;🚀
+    </h2>
+    <p>
+      Чтобы начать работать с
+      <span class="text-black dark:text-white">Hiper.</span>, достаточно создать
+      файл с расширением
+      <code
+        class="font-mono dark:text-white bg-gray-100 dark:bg-#232323 border dark:border-2 rounded border-gray-200 dark:border-#393939 py-1px px-4px"
+        >.htm</code
+      >, написать код в любом месте, добавить строку
+      <code
+        class="font-mono dark:text-white bg-gray-100 dark:bg-#232323 border dark:border-2 rounded border-gray-200 dark:border-#393939 py-1px px-4px break-all"
+        >&lt;script src=&quot;hiperlang.org/runtime.js&quot;&gt;</code
+      >
+      и открыть файл в браузере. Результат будет здесь.
+    </p>
+  </div>
+
+  <!-- Feature -->
+  <div class="w-full pb-10">
+    <h2 class="text-xl text-black dark:text-#f0f0f0 font-bold mb-4">
+      Работает везде &nbsp;🌎
+    </h2>
+    <p>
+      Файлы, созданные с
+      <span class="text-black dark:text-white">Hiper.</span>
+      открываются на любых устройствах, где есть браузер и могут быть легко
+      отправлены другим пользователям прямо в мессенджерах, таких как Telegram
+      или Whatsapp.
+    </p>
+  </div>
+
+  <!-- Feature -->
+  <div class="w-full pb-10">
+    <h2 class="text-xl text-black dark:text-#f0f0f0 font-bold mb-4">
+      Открытый код &nbsp;❤️
+    </h2>
+    <p>
+      Исходный код
+      <span class="text-black dark:text-white">Hiper.</span> будет открыт, как
+      только мы выйдем в бета. Это позволит разработчикам активно вносить вклад
+      в развитие проекта, создавать собственные расширения и инструменты для
+      разработки.
+    </p>
+  </div>
+
+  <!-- Feature -->
+  <div class="w-full pb-10">
+    <h2 class="text-xl text-black dark:text-#f0f0f0 font-bold mb-4">
+      Скорость&nbsp;🌪
+    </h2>
+    <p>
+      Мы делаем максимум, чтобы
+      <span class="text-black dark:text-white">Hiper.</span>
+      транслировался в эффективный нативный код веб-платформы. С развитием
+      <a
+        class="underline decoration-dotted"
+        href="https://developer.mozilla.org/docs/WebAssembly"
+        target="_blank"
+        >WASM
+        <svg
+          class="w-0.78rem vertical-middle inline-block fill-gray-700 dark:fill-#f0f0f0"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960">
+          <path
+            d="M206.783-100.782q-44.305 0-75.153-30.848-30.848-30.848-30.848-75.153v-546.434q0-44.305 30.848-75.153 30.848-30.848 75.153-30.848H480v106.001H206.783v546.434h546.434V-480h106.001v273.217q0 44.305-30.848 75.153-30.848 30.848-75.153 30.848H206.783ZM405.523-332 332-405.523l347.694-347.694H560v-106.001h299.218V-560H753.217v-119.694L405.523-332Z" /></svg></a
+      >, мы надеемся добиться еще большей производительности и портативности за
+      пределами браузера, открывая новые возможности для разработчиков.
+    </p>
+  </div>
+
+  <!-- Feature -->
+  <div class="w-full pb-10">
+    <h2 class="text-xl text-black dark:text-#f0f0f0 font-bold mb-4">
+      Поддержка AI &nbsp;⚡️
+    </h2>
+    <p>
+      С выходом бета-версии,
+      <span class="text-black dark:text-white">Hiper.</span> предоставит плагин
+      ChatGPT и шаблон сообщений, которые позволят настроить генерацию кода на
+      новом языке в таких AI-ботах как ChatGPT, Bard, Claude и другие.
+    </p>
+  </div>
+</div>
+
+      <!-- -------------------------- -->
+      <!-- FOOTER -->
+      <!-- -------------------------- -->
+      <footer class="c-gray text-base text-center py-10">
+        &copy; 2023 Hiper.<br />
+        Timur Fayzrakhmanov
+      </footer>
+    </div>
+
+    <!-- -------------------------- -->
+    <!-- ANIMATION -->
+    <!-- -------------------------- -->
+    <script>
+  // ---------------------------
+  // Dark mode
+  // ---------------------------
+  // TODO: theme.matches ...
+  // const mediaTheme = window.matchMedia('(prefers-color-scheme: dark)');
+  const metaTheme = document.querySelector("meta[name='theme-color']");
+  const themeBtn = document.querySelector('.--dark-mode');
+
+  function setDarkMode(dark) {
+    if (dark) {
+      document.documentElement.classList.add('dark');
+      metaTheme?.setAttribute('content', '#191919');
+    } else {
+      document.documentElement.classList.remove('dark');
+      metaTheme?.setAttribute('content', 'white');
+    }
+  }
+
+  if (typeof localStorage !== 'undefined') {
+    // If user's preferred color scheme exists
+    if (localStorage.getItem('theme') === null) {
+      // Otherwise set the default one as light
+      localStorage.theme = 'light';
+    }
+    // Restore preferred color scheme based on the saved state
+    setDarkMode(localStorage.theme === 'dark');
+  }
+
+  themeBtn?.addEventListener('click', () => {
+    // Update user's color theme regardless of the localStorage support
+    setDarkMode(!document.documentElement.classList.contains('dark'));
+    // If localStorage supported update user's preferred color scheme
+    if (typeof localStorage !== 'undefined') {
+      localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark';
+    }
+  });
+
+  // ---------------------------
+  // Lines of code
+  // ---------------------------
+  const codeColumn = document.querySelector('.--code-lines');
+  const codeText = document.querySelector('.--code-content');
+  if (codeColumn) {
+    const lineNum = codeText.textContent.split('\n').length;
+    for (let i = 1; i <= lineNum; i++) {
+      const numElm = document.createElement('div');
+      numElm.textContent = i;
+      codeColumn.appendChild(numElm);
+    }
+  }
+
+  // ---------------------------
+  // Animations
+  // ---------------------------
+  const slideUp = [...document.querySelectorAll('.--slide-up')];
+  const hand = document.querySelector('.--hand');
+
+  hand?.addEventListener('mouseenter', () => {
+    hand.classList.remove('active');
+  });
+
+  hand?.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+      hand.classList.add('active');
+    }, 100);
+  });
+
+  hand?.addEventListener('click', () => {
+    hand.classList.remove('active');
+    setTimeout(() => {
+      hand.classList.add('active');
+    }, 100);
+  });
+
+  window.addEventListener('load', () => {
+    slideUp?.forEach((e) => {
+      e.classList.add('active');
+    });
+    setTimeout(() => {
+      hand?.classList.add('active');
+    }, 1500);
+  });
+
+  // ---------------------------
+  // Copy to clipboard
+  // ---------------------------
+  const copyToClipboard = (str) => {
+    // Use the Share API if available
+    if (navigator.share) {
+      return navigator.share({
+        url: str,
+      });
+    }
+    // Use the Clipboard API if available
+    else if (navigator.clipboard && navigator.clipboard.writeText) {
+      alert('Ссылка скопирована!');
+      return navigator.clipboard.writeText(str);
+    }
+    // Fallback
+    else {
+      const el = document.createElement('textarea');
+      el.value = str;
+      el.style.display = 'none';
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+      alert('Ссылка скопирована!');
+      return Promise.resolve(); // Return a resolved Promise for consistency
+    }
+  };
+
+  // Assign share to a button
+  const shareBtn = document.querySelector('.--share');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', async () => {
+      copyToClipboard(window.location.href)
+        .then(() => {
+          console.log('Text copied to clipboard successfully');
+        })
+        .catch((error) => {
+          console.error('Clipboard API error:', error);
+        });
+    });
+    shareBtn.classList.add('active');
+  }
+</script>
+  </body>
+</html>

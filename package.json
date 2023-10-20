@@ -1,6 +1,5 @@
 {
   "name": "hiperlang.org",
-  "version": "0.1.0",
   "description": "Website for Hiper. programming language.",
   "devDependencies": {
     "@web/dev-server": "^0.3.3",
@@ -8,6 +7,7 @@
     "concurrently": "latest",
     "cpx2": "latest",
     "cssnano": "latest",
+    "nodemon": "^3.0.1",
     "postcss": "latest",
     "postcss-cli": "latest",
     "postcss-import": "latest",

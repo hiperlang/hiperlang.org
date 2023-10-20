@@ -1,0 +1,128 @@
+<script>
+  // ---------------------------
+  // Dark mode
+  // ---------------------------
+  // TODO: theme.matches ...
+  // const mediaTheme = window.matchMedia('(prefers-color-scheme: dark)');
+  const metaTheme = document.querySelector("meta[name='theme-color']");
+  const themeBtn = document.querySelector('.--dark-mode');
+
+  function setDarkMode(dark) {
+    if (dark) {
+      document.documentElement.classList.add('dark');
+      metaTheme?.setAttribute('content', '#191919');
+    } else {
+      document.documentElement.classList.remove('dark');
+      metaTheme?.setAttribute('content', 'white');
+    }
+  }
+
+  if (typeof localStorage !== 'undefined') {
+    // If user's preferred color scheme exists
+    if (localStorage.getItem('theme') === null) {
+      // Otherwise set the default one as light
+      localStorage.theme = 'light';
+    }
+    // Restore preferred color scheme based on the saved state
+    setDarkMode(localStorage.theme === 'dark');
+  }
+
+  themeBtn?.addEventListener('click', () => {
+    // Update user's color theme regardless of the localStorage support
+    setDarkMode(!document.documentElement.classList.contains('dark'));
+    // If localStorage supported update user's preferred color scheme
+    if (typeof localStorage !== 'undefined') {
+      localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark';
+    }
+  });
+
+  // ---------------------------
+  // Lines of code
+  // ---------------------------
+  const codeColumn = document.querySelector('.--code-lines');
+  const codeText = document.querySelector('.--code-content');
+  if (codeColumn) {
+    const lineNum = codeText.textContent.split('\n').length;
+    for (let i = 1; i <= lineNum; i++) {
+      const numElm = document.createElement('div');
+      numElm.textContent = i;
+      codeColumn.appendChild(numElm);
+    }
+  }
+
+  // ---------------------------
+  // Animations
+  // ---------------------------
+  const slideUp = [...document.querySelectorAll('.--slide-up')];
+  const hand = document.querySelector('.--hand');
+
+  hand?.addEventListener('mouseenter', () => {
+    hand.classList.remove('active');
+  });
+
+  hand?.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+      hand.classList.add('active');
+    }, 100);
+  });
+
+  hand?.addEventListener('click', () => {
+    hand.classList.remove('active');
+    setTimeout(() => {
+      hand.classList.add('active');
+    }, 100);
+  });
+
+  window.addEventListener('load', () => {
+    slideUp?.forEach((e) => {
+      e.classList.add('active');
+    });
+    setTimeout(() => {
+      hand?.classList.add('active');
+    }, 1500);
+  });
+
+  // ---------------------------
+  // Copy to clipboard
+  // ---------------------------
+  const copyToClipboard = (str) => {
+    // Use the Share API if available
+    if (navigator.share) {
+      return navigator.share({
+        url: str,
+      });
+    }
+    // Use the Clipboard API if available
+    else if (navigator.clipboard && navigator.clipboard.writeText) {
+      alert('Ссылка скопирована!');
+      return navigator.clipboard.writeText(str);
+    }
+    // Fallback
+    else {
+      const el = document.createElement('textarea');
+      el.value = str;
+      el.style.display = 'none';
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+      alert('Ссылка скопирована!');
+      return Promise.resolve(); // Return a resolved Promise for consistency
+    }
+  };
+
+  // Assign share to a button
+  const shareBtn = document.querySelector('.--share');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', async () => {
+      copyToClipboard(window.location.href)
+        .then(() => {
+          console.log('Text copied to clipboard successfully');
+        })
+        .catch((error) => {
+          console.error('Clipboard API error:', error);
+        });
+    });
+    shareBtn.classList.add('active');
+  }
+</script>

@@ -1,0 +1,109 @@
+<div class="flex flex-wrap mb-18 relative w-full">
+  <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg> -->
+
+  <!-- SELECT -->
+  <div class="mb-2 mr-2">
+    <div class="relative">
+      <select
+        class="px-4 pr-10 py-2 text-sm bg-gray-1 dark:bg-#232323 font-body outline-none rounded text-base cursor-pointer">
+        <option>Создание таблицы</option>
+        <option>Фибоначчи числа</option>
+        <option>Что-то еще..</option>
+      </select>
+      <svg
+        class="absolute fill-gray-700 pointer-events-none right-2 top-2.2 h-20px w-20px"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 -960 960 960">
+        <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
+      </svg>
+    </div>
+  </div>
+  <!-- RUN -->
+  <!-- <div
+    class="px-4 mb-2 py-[calc(0.5rem-2px)] text-base bg-gray-1 dark:bg-#232323 rounded transition cursor-pointer c-black focus:outline-none hover:c-blue">
+    <div class="">▶</div>
+  </div> -->
+
+  <!-- ??? -->
+  <!-- <div
+      class="px-4 py-2 ml-32 mb-2 bg-gray-1 text-sm rounded transition cursor-pointer c-black">
+      <div class="">Результат</div>
+    </div> -->
+
+  <!-- BREAK -->
+  <div class="basis-full h-0"></div>
+
+  <!-- CODE -->
+  <div
+    class="flex py-4 pl-4 pr-4 bg-gray-1 dark:bg-#232323 rounded-2 lh-1.4em overflow-auto">
+    <!-- LOC -->
+    <div class="pr-3 c-gray-3 font-mono --code-lines"></div>
+
+    <!-- Content -->
+    <pre class="relative font-mono --code-content lh-">
+.users: (.name: str, .age: num){*}  
+  `John`, 31; `Mary`, 28
+  `Tom`, 19; `Eve`, 42
+
+.style =>
+  ./&lt;tr&gt;/&lt;td&gt;
+    #padding-2
+    #border-2-gray
+
+&lt;table #style&gt; 
+  &lt;tr&gt;
+    &lt;td&gt;&lt;b&gt; `Name`
+    &lt;td&gt;&lt;b&gt; `Age`
+  for (users) |.user|
+    &lt;tr&gt;
+      &lt;td&gt; user.name
+      &lt;td&gt; user.age
+
+&lt;p #margin-t-4&gt; `Total: ` len(users)</pre
+    >
+  </div>
+
+  <!-- BREAK -->
+  <div
+    class="border-b-2 border-solid border-gray-3 basis-full pt-4 sm:hidden"></div>
+
+  <!-- RESULT -->
+  <div class="pl-6 py-4">
+    <style>
+      table,
+      th,
+      td {
+        padding: 1rem;
+        border: 2px solid slategray;
+        border-collapse: collapse;
+      }
+    </style>
+    <table>
+      <tr>
+        <td><b>Name</b></td>
+        <td><b>Age</b></td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>31</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>28</td>
+      </tr>
+      <tr>
+        <td>Tom</td>
+        <td>19</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>42</td>
+      </tr>
+    </table>
+
+    <p class="m-t-4">Total: 4</p>
+  </div>
+
+  <!-- COMMENTS -->
+  <!-- <div class="flex-none py-4 pl-4 lh-1.4em">x</div> -->
+</div>
