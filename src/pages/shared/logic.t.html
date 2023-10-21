@@ -1,11 +1,22 @@
 <script>
   // ---------------------------
+  // Touch mode
+  // ---------------------------
+  function isTouchDevice() {
+    return 'ontouchstart' in window || navigator.maxTouchPoints;
+  }
+
+  if (isTouchDevice()) {
+    document.documentElement.classList.remove('non-touch');
+  }
+
+  // ---------------------------
   // Dark mode
   // ---------------------------
   // TODO: theme.matches ...
   // const mediaTheme = window.matchMedia('(prefers-color-scheme: dark)');
   const metaTheme = document.querySelector("meta[name='theme-color']");
-  const themeBtn = document.querySelector('.--dark-mode');
+  const themeBtn = document.querySelector('.--toggle-dark-mode');
 
   function setDarkMode(dark) {
     if (dark) {
@@ -30,7 +41,7 @@
   themeBtn?.addEventListener('click', () => {
     // Update user's color theme regardless of the localStorage support
     setDarkMode(!document.documentElement.classList.contains('dark'));
-    // If localStorage supported update user's preferred color scheme
+    // If localStorage supported update the state
     if (typeof localStorage !== 'undefined') {
       localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark';
     }
@@ -111,7 +122,6 @@
     }
   };
 
-  // Assign share to a button
   const shareBtn = document.querySelector('.--share');
   if (shareBtn) {
     shareBtn.addEventListener('click', async () => {

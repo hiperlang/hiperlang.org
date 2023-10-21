@@ -98,10 +98,12 @@ select {
   animation: shake 0.3s ease-out 2;
 }
 
-.cursor-pointer:hover svg {
+/* @media (hover: hover) and (pointer: fine) { */
+.non-touch .--hover-svg-fill:hover svg {
   fill: black;
 }
 
-.dark .cursor-pointer:hover svg {
+.non-touch.dark .--hover-svg-fill:hover svg {
   fill: white;
 }
+/* } */
