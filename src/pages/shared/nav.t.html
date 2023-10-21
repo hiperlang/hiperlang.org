@@ -1,4 +1,4 @@
-<nav class="flex flex-wrap justify-between c-gray-4">
+<nav class="relative flex flex-wrap justify-between text-gray-400">
   <!-- LOGO -->
   <a href="/" class="self-center">
     <svg
@@ -102,8 +102,43 @@
 
     <!-- MORE (ICON) -->
     <a
-      class="sm:hidden self-center cursor-pointer pl-2 pr-1 hover:c-black dark:hover:c-white transition-duration-100">
-      <span class="text-2rem -top-2 relative">...</span>
+      class="--open-menu sm:hidden self-center cursor-pointer pl-2 pr-1 hover:c-black dark:hover:c-white text-2rem -top-2 relative transition-duration-100">
+      ...
+    </a>
+  </div>
+
+  <!-- POPUP MENU -->
+  <div
+    class="--menu hidden absolute z-1 right-0 top-3rem text-right border-2 border-gray-300 dark:border-gray-400 dark:bg-#232323 bg-white rounded">
+    <!-- tip arrow -->
+    <div
+      class="w-0 h-0 absolute -top-17px right-6px border-8 border-b-gray-300 dark:border-b-gray-400 border-t-transparent border-l-transparent border-r-transparent"></div>
+
+    <!-- items -->
+    <a
+      class="block cursor-not-allowed px-4 py-0.5 pt-2 hover:text-black dark:hover:text-white transition-duration-100">
+      О проекте
+    </a>
+    <a
+      class="block cursor-not-allowed px-4 py-0.5 hover:text-black dark:hover:text-white transition-duration-100">
+      Поддержать
+    </a>
+    <a
+      class="block cursor-not-allowed px-4 py-0.5 hover:text-black dark:hover:text-white transition-duration-100">
+      Контакты
+    </a>
+    <a
+      href="https://github.com/hiperlang"
+      target="_blank"
+      class="--hover-svg-fill block cursor-pointer px-4 py-0.5 pb-2 hover:text-black dark:hover:text-white transition-duration-100">
+      Исходный код
+      <svg
+        class="w-0.78rem vertical-middle inline-block fill-gray-400 transition-duration-100"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 -960 960 960">
+        <path
+          d="M206.783-100.782q-44.305 0-75.153-30.848-30.848-30.848-30.848-75.153v-546.434q0-44.305 30.848-75.153 30.848-30.848 75.153-30.848H480v106.001H206.783v546.434h546.434V-480h106.001v273.217q0 44.305-30.848 75.153-30.848 30.848-75.153 30.848H206.783ZM405.523-332 332-405.523l347.694-347.694H560v-106.001h299.218V-560H753.217v-119.694L405.523-332Z" />
+      </svg>
     </a>
   </div>
 </nav>

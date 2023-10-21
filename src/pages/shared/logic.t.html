@@ -2,6 +2,24 @@
   // ---------------------------
   // Touch mode
   // ---------------------------
+  menuBtn = document.querySelector('.--open-menu');
+  menu = document.querySelector('.--menu');
+
+  // Toggle menu on click
+  menuBtn?.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // Close menu on click outside
+  document.addEventListener('click', (e) => {
+    if (!menuBtn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.add('hidden');
+    }
+  });
+
+  // ---------------------------
+  // Touch mode
+  // ---------------------------
   function isTouchDevice() {
     return 'ontouchstart' in window || navigator.maxTouchPoints;
   }

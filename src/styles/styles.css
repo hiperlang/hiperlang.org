@@ -98,7 +98,6 @@ select {
   animation: shake 0.3s ease-out 2;
 }
 
-/* @media (hover: hover) and (pointer: fine) { */
 .non-touch .--hover-svg-fill:hover svg {
   fill: black;
 }
@@ -106,4 +105,18 @@ select {
 .non-touch.dark .--hover-svg-fill:hover svg {
   fill: white;
 }
-/* } */
+
+.--men::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid black;
+  left: -8px;
+
+  top: 7px;
+}
