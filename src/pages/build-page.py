@@ -13,9 +13,6 @@ else:
     assert os.path.isfile(
         input_file
     ), f"Error: Input file '{input_file}' does not exist."
-    assert os.path.isfile(
-        output_file
-    ), f"Error: Output file '{output_file} does not exist."
 
     def process_fn(match):
         if match.group() is not None:
@@ -33,7 +30,7 @@ else:
 
             assert (
                 "src" in param_dict
-            ), 'One of the <include> is missing src="path" attribute.'
+            ), 'Error: One of the <include> is missing src="path" attribute.'
             input_file = param_dict["src"]
             assert os.path.isfile(
                 input_file
@@ -55,6 +52,8 @@ else:
         with open(input_file, "r") as file:
             pattern = r"<include\s*(.+?)[ ]*>(.*?)</include>"
             res = re.sub(pattern, process_fn, file.read(), flags=re.DOTALL)
+
+            # flash
             with open(output_file, "w") as file:
                 file.write(res)
 
