@@ -29,15 +29,20 @@ STYLES_OUT="$OUT/styles.css"
 
 # Production build
 if [ "$1" = "--release" ]; then
-  bunx cpx "$CNAME" "$CNAME_OUT"
-  bunx cpx "$PAGES" "$PAGES_OUT" --ignore "$TEMPL_IGNORE"
-  bunx cpx "$ICONS" "$ICONS_OUT"
-  bunx cpx "$FONTS" "$FONTS_OUT"
-  bunx cpx "$MANIFEST" "$MANIFEST_OUT"
-  bunx unocss "$PAGES" --out-file "$UTILS_OUT" --preflights false
-  bunx postcss "$STYLES" --output "$STYLES_OUT" --use postcss-import --use autoprefixer --autoprefixer '> 1%, last 5 versions' --use cssnano --no-map
+  $PM cpx "$CNAME" "$CNAME_OUT"
+  $PM cpx "$PAGES" "$PAGES_OUT" --ignore "$TEMPL_IGNORE"
+  $PM cpx "$ICONS" "$ICONS_OUT"
+  $PM cpx "$FONTS" "$FONTS_OUT"
+  $PM cpx "$MANIFEST" "$MANIFEST_OUT"
+  $PM unocss "$PAGES" --out-file "$UTILS_OUT" --preflights false
+  $PM postcss "$STYLES" --output "$STYLES_OUT" --use postcss-import --use autoprefixer --autoprefixer '> 1%, last 5 versions' --use cssnano --no-map
   mkdir -p docs/ru
-  bunx nodemon --exec "$TEMPL_ENGINE src/pages/ru/index.t.html --output docs/ru/index.html" --watch "$TEMPLS"
+  $TEMPL_ENGINE src/pages/ru/index.t.html --output docs/ru/index.html
+  exit 0
+fi
+
+if [ "$1" = "--serve" ]; then
+  $PM web-dev-server --root-dir=$OUT --watch
   exit 0
 fi
 
