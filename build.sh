@@ -26,6 +26,7 @@ MANIFEST_OUT="$OUT"
 STYLES_OUT="$OUT/styles.css"
 
 # mkdir -p ./docs/ru && bunx nodemon --exec "./src/pages/build-page.py src/pages/ru/index.t.html --output docs/ru/index.html" --watch src/pages/ -e t.html
+# html-minifier --input-dir . --output-dir . --remove-comments --collapse-whitespace --minify-css --minify-js --file-ext html
 
 # Production build
 if [ "$1" = "--release" ]; then

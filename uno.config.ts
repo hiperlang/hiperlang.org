@@ -1,6 +1,9 @@
 import { defineConfig, presetUno } from 'unocss';
 export default defineConfig({
   presets: [presetUno()],
+  content: {
+    filesystem: ['src/**/*.{html,t.html}'],
+  },
   theme: {
     breakpoints: {
       xs: '475px',
