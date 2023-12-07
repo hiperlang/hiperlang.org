@@ -7,8 +7,6 @@
       <select
         class="px-4 pr-10 py-2 text-sm bg-gray-1 dark:bg-#232323 font-body outline-none rounded text-base cursor-pointer">
         <option>Создание таблицы</option>
-        <option>Фибоначчи числа</option>
-        <option>Что-то еще..</option>
       </select>
       <svg
         class="absolute fill-gray-700 pointer-events-none right-2 top-2.2 h-20px w-20px"
@@ -45,21 +43,27 @@
   `John`, 31; `Mary`, 28
   `Tom`, 19; `Eve`, 42
 
+.table
+  .tr
+    .td = .b = `Name`
+    .td = .b = `Age`
+  for (users) |.u|
+    .tr
+      .td = u.name
+      .td = u.age
+
 .style =>
-  ./&lt;tr&gt;/&lt;td&gt;
+  ./.tr/.td
     #padding-2
     #border-2-gray
 
-&lt;table #style&gt; 
-  &lt;tr&gt;
-    &lt;td&gt;&lt;b&gt; `Name`
-    &lt;td&gt;&lt;b&gt; `Age`
-  for (users) |.user|
-    &lt;tr&gt;
-      &lt;td&gt; user.name
-      &lt;td&gt; user.age
+.html [.lang=`en`]
+  .body
+    table
+    .p #margin-t-4
+      `Total: ` ++ len(users)
 
-&lt;p #margin-t-4&gt; `Total: ` len(users)</pre
+@export.entry = html</pre
     >
   </div>
 
@@ -68,7 +72,7 @@
     class="border-b-2 border-solid border-gray-300 dark:border-#777 basis-full pt-4 sm:hidden"></div>
 
   <!-- RESULT -->
-  <div class="pl-6 py-4">
+  <div class="pl-6 py-4 flex-1">
     <style>
       table,
       th,
@@ -76,6 +80,9 @@
         padding: 1rem;
         border: 2px solid gray;
         border-collapse: collapse;
+      }
+      table {
+        width: 100%;
       }
     </style>
     <table>
